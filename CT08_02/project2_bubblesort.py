@@ -4,10 +4,10 @@ l3=[24, 8, 10, 22, 45, 34, 28, 39, 3, 32]
 l4=[15, 21, 8, 32, 46, 44, 37, 20, 27, 22]
 l5=[11, 38, 4, 28, 24, 41, 15, 10, 45, 14]
 save=0
-z=l5
-for i in range(len(z)):
-    for i in range(len(z)-1):
-        if z[i] >z[i+1]:
+z=l3
+for j in range(len(z)):
+    for i in range(len(z)-j-1):
+        if z[i] > z[i+1]:
             save=z[i+1]
             z[i+1] =z[i]
             z[i] = save
