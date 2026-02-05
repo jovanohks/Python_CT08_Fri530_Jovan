@@ -1,48 +1,54 @@
-s={
+stuff={
     "pen":1.5,
     "book":5,
     "notebook":2.5,
     "calculator":30
 }
-def x(m):
-    for a,b in m.items():
+global items
+global total
+def listitem(lis):
+    for a,b in lis.items():
         print(f"{a}: ${b}")
-def z(m):
-    global z
-    global t
-    t=0
-    z={}
-    y=True
-    while y==True:
-        x=input("What do you want to buy?")
-        if x in m:
+def get_order(lis):
+
+    total = 0
+    items = {}
+    y = True
+    while y == True:
+        user = input("What do you want to buy? ")
+        if user in lis:
             #y=int(input("how many do you want to buy"))
-            a=input("do you want to add to order? y/n: ")
-            if a =="y":
-                print(f"added to order")
-                q=int(input("how many?"))
-                z[x]={"q":q,"c":m[x]}
-                t=t+(q*m[x])
+            a= input("do you want to add to order? y/n: ")
+            if a == "y":
+                
+                amt = int(input("how many? "))
+                print(f"{amt} {user} added to order")
+                items[user] = {"amt":amt,"cost":lis[user]}
+                total = total+(amt*lis[user])
             else:
                 print(f" not added to order.")
-        elif x =="no more":
+        elif user == "no more":
             break
-        elif not x in m:
+        elif not user in lis:
             print("not in bookshop")
-def y():
+def summary():
     print("order summary")
-    for a,b in z.items():
-        print(f"{a}: {b['q']} @ ${b['c']:.2f} each = ${(b['q'] * b['c']):.2f}")
-    print(f"total: ${t:.2f}")
-# def d():
-#     if t >=20:
-#         t=0.9*t
-#         print(f"20% discount applied, total with discount is ${t:.2f}")
+    for a,b in items.items():
+        print(f"{a}: {b['amt']} @ ${b['cost']:.2f} each = ${(b['amt'] * b['cost']):.2f}")
+
+    print(f"total: ${total:.2f}")
+def discount():
+    d=total
+    print(d)
+    if d> 20:
+        d=d*0.8
+        print(f"discounted 20% total is ${d:.2f} discounted ${(d*0.25):.2f}")
 
 
 
 
-x(s)
-z(s)
-y()
-d()
+
+listitem(stuff)
+get_order(stuff)
+summary()
+discount()
