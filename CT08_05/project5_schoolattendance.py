@@ -18,6 +18,7 @@ def check_attendance(listt,name):
         days_present=0
         for a in listt[name]:
             if a==True:
+                
                 days_present+=1
         attendance_percentage=days_present/len(listt)
         return attendance_percentage
@@ -26,7 +27,9 @@ def check_attendance(listt,name):
         attendance_percentage=False
         return attendance_percentage
 def notify_low_attendance(listt,threshold):
-    
+    for i in something:
+        if check_attendance(listt,i) < threshold:
+            print(f"student {i} has low attendance")
 something={
     "John":[],
     "Johnny":[],
@@ -34,13 +37,12 @@ something={
     "Alice":[],
     "Bob":[],
     "Alex":[],
-    "Joshua":[]
-}
+ 
 
 take_attendance(something)
-print(something)
-a=check_attendance(something,"Bob")
-print(a)
-
-
-    
+notify_low_attendance(something,50)
+   "Joshua":[]
+}
+#     e True:
+#     take_attendance(something)
+    notify_low_attendance(something,50)
