@@ -33,7 +33,7 @@ def score_quiz(key,ans):
         if key[question] == ans[question]: 
             correct +=1 
     return correct
-print(score_quiz(answer_key,student_ans))
+
 
 # ============================================================
 # Step 2: Write function wrong_questions(key, ans)
@@ -49,7 +49,7 @@ def wrong_questions(key,ans):
         if not ans[question]==key[question]:
             wrong.append(question+1) #append question number to list and add one since index start from 0
     return wrong
-print(wrong_questions(answer_key,student_ans))
+
     
 
 
