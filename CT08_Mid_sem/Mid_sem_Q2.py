@@ -3,7 +3,6 @@ def calc_points(word):
     points=0
     for i in range(len(word)):
         character=word[i]
-
         points+=letters[character]
     return points
 
