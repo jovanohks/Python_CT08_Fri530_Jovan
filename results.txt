@@ -1,0 +1,11 @@
+Text analysis
+Total number of characters: 52968
+Total vowels: 15705
+
+Vowel frequency:
+A:3401
+E:4835
+I:2932
+O:3227
+U:1310
+Total percentage of vowels in text: 29.65%
