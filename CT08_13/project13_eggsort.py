@@ -3,13 +3,13 @@ valid = 0
 
 for i in range(len(egg_code)):
     check = 0
-    if len(egg_code[i]) > 7:
+    if len(egg_code[i]) >=5 and len(egg_code[i]) <=8:
         check += 1
-    if egg_code[i][0] in [0123]:
+    if egg_code[i][0] in [0,1,2,3]:
         check += 1
-    if egg_code[i][1:3].isalpha:
+    if egg_code[i][1:3].isalpha():
         check += 1
-    if egg_code[i][3:].isdigit:
+    if egg_code[i][3:].isdigit():
         check += 1
     if check == 3:
         valid = 1
@@ -27,10 +27,10 @@ if valid == len(egg_code):
     countries_eggs = [0,0,0]
     for m in range(len(egg_code)):
         for n in range(len(countries)):
-            if egg_code[m][:2] == countries[n]:
-            countries_eggs[m] += 1
+            if egg_code[n][:2] == countries[n]:
+                countries_eggs[m] += 1
     for p in range(len(countries_eggs)):
         print("Number of {0} eggs: {1}".format(countries[p], countries_eggs[p]))
-else
+else:
     print("Invalid egg codes found for this batch of eggs.")
     print("No data will be presented.")

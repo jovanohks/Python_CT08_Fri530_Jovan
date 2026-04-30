@@ -12,20 +12,20 @@ action = input("Enter 'B' to borrow a book or 'R' to return a book: ")
 book_id = input("Enter the book ID: ")
 ### Make your code fixes after this
 
-if action = "b"
-    if books[book_id] == "Available":
-        books["B"] = "borrowed"
+if action == "b":
+    if books[book_id] == "AVAILABLE":
+        books[book_id] = "BORROWED"
         print("You have borrowed the book.")
     else:
         print("The book is already borrowed.")
-elif action = "r":
-    if books[book_id] == "borrowed":
-        books("R") = "available"
-        print(You have returned the book.")
+elif action == "r":
+    if books[book_id] == "BORROWED":
+        books[book_id] = "AVAILABLE"
+        print("You have returned the book.")
     else:
-    print("The book is already available.")
-    else:
-        print("Invalid action.)
+        print("The book is already available.")
+else:
+    print("Invalid action.")
 
 '''
 Identify and correct the errors in the program so that it works according to 
