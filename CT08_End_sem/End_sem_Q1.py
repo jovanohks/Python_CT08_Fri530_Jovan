@@ -45,18 +45,16 @@ non_vip={}
 # ============================================================
 for name in customer_spending:
 
+
+
+    # ============================================================
+    # Step 3: Group customers into vip / non_vip
+    # ============================================================
+
     if customer_spending[name]>1000:
         vip[name] = customer_spending[name]
     elif customer_spending[name] <= 1000:
         non_vip[name]=customer_spending[name]
-
-
-
-# ============================================================
-# Step 3: Group customers into vip / non_vip
-# ============================================================
-
-
 
 # ============================================================
 # Step 4: Print customer messages
